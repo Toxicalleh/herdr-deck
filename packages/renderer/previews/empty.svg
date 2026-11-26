@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <defs>
+    <clipPath id="c-empty"><rect width="144" height="144" rx="24" ry="24"/></clipPath>
+    <filter id="g-empty" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g clip-path="url(#c-empty)">
+    <rect width="144" height="144" fill="#0d1017"/>
+    <circle cx="126" cy="18" r="38" fill="#ffffff" opacity="0.06"/>
+    
+    <rect x="54" y="64" width="36" height="6" rx="3" fill="#3a4152"/>
+    <text x="72" y="112" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#5b6475" letter-spacing="1.2">SLOT 4</text>
+    
+    <rect width="144" height="144" rx="24" ry="24" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  </g>
+</svg>

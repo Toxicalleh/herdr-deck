@@ -1,0 +1,20 @@
+{
+  "name": "@herdr-deck/renderer",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test dist/**/*.test.js",
+    "preview": "node dist/preview.js",
+    "live": "node dist/live.js",
+    "showcase": "node dist/showcase.js"
+  },
+  "dependencies": {
+    "@herdr-deck/helper": "0.1.0",
+    "@herdr-deck/shared": "0.1.0"
+  }
+}

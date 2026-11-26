@@ -1,0 +1,21 @@
+{
+  "name": "@herdr-deck/streamdeck-plugin",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "bundle": "node scripts/build-sdplugin.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "dependencies": {
+    "@herdr-deck/helper": "0.1.0",
+    "@herdr-deck/renderer": "0.1.0",
+    "@herdr-deck/shared": "0.1.0",
+    "@elgato/streamdeck": "^2.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

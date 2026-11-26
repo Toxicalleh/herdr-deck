@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-heading>Connection (all Herdr keys)</sdpi-heading>
+    <sdpi-item label="SSH target">
+      <sdpi-textfield setting="sshTarget" global placeholder="user@linux-box"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="Machine name">
+      <sdpi-textfield setting="machine" global placeholder="as in hc machine ls (default: host)"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="Remote hc">
+      <sdpi-textfield setting="remoteHc" global placeholder="~/.local/bin/hc"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="This PC too">
+      <sdpi-checkbox setting="includeLocal" global label="Also read this computer's herdr-core"></sdpi-checkbox>
+    </sdpi-item>
+    <sdpi-item label="hc">
+      <sdpi-textfield setting="hcPath" global placeholder="hc on this computer (on PATH)"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="herdr-app">
+      <sdpi-textfield setting="herdrAppPath" global placeholder="herdr-app (on PATH)"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="herdr CLI">
+      <sdpi-textfield setting="cliHerdr" global placeholder="~/.local/bin/herdr (on the server)"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="CLI on this PC">
+      <sdpi-checkbox setting="cliLocal" global default="true" label="Also read this computer's herdr CLI"></sdpi-checkbox>
+    </sdpi-item>
+    <sdpi-item label="Local herdr">
+      <sdpi-textfield setting="localCliHerdr" global placeholder="herdr (on PATH)"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-heading>This key (Agent keys only)</sdpi-heading>
+    <sdpi-item label="Agent">
+      <sdpi-select setting="agent" datasource="getAgents" show-refresh default=""></sdpi-select>
+    </sdpi-item>
+  </body>
+</html>

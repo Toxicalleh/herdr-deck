@@ -1,0 +1,29 @@
+{
+  "name": "herdr-deck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stream Deck integration that shows the live status of agents running in Herdr.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm --workspace @herdr-deck/shared run build && npm --workspace @herdr-deck/helper run build && npm --workspace @herdr-deck/renderer run build && npm --workspace @herdr-deck/streamdeck-plugin run build",
+    "test": "npm --workspace @herdr-deck/shared run test && npm --workspace @herdr-deck/helper run test && npm --workspace @herdr-deck/renderer run test && npm --workspace @herdr-deck/streamdeck-plugin run test",
+    "typecheck": "npm --workspace @herdr-deck/shared run typecheck && npm --workspace @herdr-deck/helper run typecheck && npm --workspace @herdr-deck/renderer run typecheck && npm --workspace @herdr-deck/streamdeck-plugin run typecheck",
+    "helper:status": "npm --workspace @herdr-deck/helper run status --",
+    "helper:watch": "npm --workspace @herdr-deck/helper run watch --",
+    "plugin:bundle": "npm --workspace @herdr-deck/streamdeck-plugin run bundle",
+    "plugin:pack": "npm run plugin:bundle && npx -y @elgato/cli@1 pack packages/streamdeck-plugin/dist/com.herdr-deck.sdPlugin -o dist -f",
+    "plugin:share": "npm run plugin:bundle && rm -rf ~/StreamDeck/com.herdr-deck.sdPlugin && cp -r packages/streamdeck-plugin/dist/com.herdr-deck.sdPlugin ~/StreamDeck/",
+    "render:preview": "npm --workspace @herdr-deck/renderer run preview",
+    "render:showcase": "npm --workspace @herdr-deck/renderer run showcase",
+    "render:live": "npm --workspace @herdr-deck/renderer run live --"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

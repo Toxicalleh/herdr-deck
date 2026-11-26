@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Icon": "imgs/agent-icon",
+      "Name": "Herdr Agent",
+      "PropertyInspectorPath": "ui/settings.html",
+      "States": [
+        {
+          "Image": "imgs/agent-icon",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Live status of one Herdr agent. Press to jump to it.",
+      "UUID": "com.herdr-deck.agent",
+      "Controllers": [
+        "Keypad"
+      ]
+    },
+    {
+      "Icon": "imgs/overview-icon",
+      "Name": "Herdr Overview",
+      "PropertyInspectorPath": "ui/settings.html",
+      "States": [
+        {
+          "Image": "imgs/overview-icon",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "How many Herdr agents are working, blocked or done. Press to jump to the one that needs you.",
+      "UUID": "com.herdr-deck.overview",
+      "Controllers": [
+        "Keypad"
+      ]
+    },
+    {
+      "Icon": "imgs/cli-agent-icon",
+      "Name": "Herdr CLI Agent",
+      "PropertyInspectorPath": "ui/settings.html",
+      "States": [
+        {
+          "Image": "imgs/cli-agent-icon",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Live status of one agent in the herdr CLI (terminal version). Press to jump to it.",
+      "UUID": "com.herdr-deck.cli-agent",
+      "Controllers": [
+        "Keypad"
+      ]
+    },
+    {
+      "Icon": "imgs/cli-overview-icon",
+      "Name": "Herdr CLI Overview",
+      "PropertyInspectorPath": "ui/settings.html",
+      "States": [
+        {
+          "Image": "imgs/cli-overview-icon",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "How many herdr CLI agents are working, blocked or done. Press to jump to the one that needs you.",
+      "UUID": "com.herdr-deck.cli-overview",
+      "Controllers": [
+        "Keypad"
+      ]
+    },
+    {
+      "Icon": "imgs/claude-usage-icon",
+      "Name": "Claude Usage",
+      "PropertyInspectorPath": "ui/claude.html",
+      "States": [
+        {
+          "Image": "imgs/claude-usage-icon",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "How much of your Claude plan is left (5 hours / this week), from the Claude Code login. Press to refresh.",
+      "UUID": "com.herdr-deck.claude-usage",
+      "Controllers": [
+        "Keypad"
+      ]
+    }
+  ],
+  "Author": "Toxicalleh",
+  "Category": "Herdr Deck",
+  "CategoryIcon": "imgs/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Shows the live status of your Herdr agents (app and CLI) and your Claude usage on Stream Deck.",
+  "Icon": "imgs/plugin-icon",
+  "Name": "Herdr Deck",
+  "Nodejs": {
+    "Version": "20"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "UUID": "com.herdr-deck",
+  "Version": "0.1.0.0"
+}

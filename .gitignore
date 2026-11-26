@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+*.log
+logs/
+.DS_Store
+*.streamDeckPlugin
+
+# Personal / machine-specific
+CLAUDE.md
+CLAUDE.local.md
+.claude/settings.local.json
+# render:live writes tiles from your real agents here
+docs/live/

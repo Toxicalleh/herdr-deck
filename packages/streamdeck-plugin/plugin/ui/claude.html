@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-heading>This key</sdpi-heading>
+    <sdpi-item label="Show">
+      <sdpi-select setting="window" default="5h">
+        <option value="5h">5-hour limit</option>
+        <option value="weekly">Weekly limit</option>
+        <option value="lowest">Whichever is lower</option>
+      </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-heading>Claude login (all Claude keys)</sdpi-heading>
+    <sdpi-item label="Login from">
+      <sdpi-select setting="claudeSource" global default="auto">
+        <option value="auto">This PC, else the server</option>
+        <option value="server">The server (over SSH)</option>
+        <option value="pc">This PC only</option>
+      </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="SSH target">
+      <sdpi-textfield setting="sshTarget" global placeholder="user@linux-box (same as the Herdr keys)"></sdpi-textfield>
+    </sdpi-item>
+    <p style="color:#9aa3b2;font-size:11px;margin:8px 12px">
+      Uses your Claude Code login. If the key says LOG IN, run <b>claude</b> in a terminal and type <b>/login</b>.
+      Press the key to refresh. It updates by itself every minute.
+    </p>
+  </body>
+</html>
